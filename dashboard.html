@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" media="screen and (max-device-width:768px)" href="css/tabletview.css">
+    <link rel="stylesheet" media="screen and (max-device-width:480px)" href="css/mobileview.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <title>Dashboard</title>
 </head>
@@ -57,7 +59,7 @@
                 </div>
                 <div class="container-fluid">
                     <div class="row" style="width: 1247px;">
-                        <div class="col col-box">
+                        <div class="col-box">
                             <div class="col-box-img">
                                 <img src="images/star.svg" alt="">
                             </div>
@@ -71,7 +73,7 @@
                             </div>
                         </div>
 
-                        <div class="col col-box">
+                        <div class="col-box">
                             <div class="col-box-img">
                                 <img src="images/new-product.svg" alt="">
                             </div>
@@ -85,7 +87,7 @@
                             </div>
                         </div>
 
-                        <div class="col col-box">
+                        <div class="col-box">
                             <div class="col-box-img">
                                 <img src="images/total-product.svg" alt="" height="50px" width="50px">
                             </div>
@@ -99,7 +101,7 @@
                             </div>
                         </div>                       
 
-                        <div class="col col-box">
+                        <div class="col-box">
                             <div class="col-box-img">
                                 <img src="images/dollar-filled.svg" alt="">
                             </div>
@@ -113,7 +115,7 @@
                             </div>
                         </div>
 
-                        <div class="col col-box">
+                        <div class="col-box">
                             <div class="col-box-img">
                                 <img src="images/money-bag.svg" alt="">
                             </div>
@@ -128,8 +130,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="container-fluid">
-                    <div class="row">
+                <div class="container-fluid ">
+                    <div class="row stats-box">
                         <div id="sales-graph-box">
                             <div class="graph-text">
                                 <span style="float: left;">Sales</span>
@@ -265,5 +267,17 @@
             </div>
         </div>
     </div>
+
+    <script>
+        const targetDiv = document.getElementById("sidebar");
+        const btn = document.getElementById("menu-bar-style");
+        btn.onclick = function () {
+        if (targetDiv.style.display !== "none") {
+            targetDiv.style.display = "none";
+        } else {
+            targetDiv.style.display = "block";
+        }
+        };
+    </script>
 </body>
 </html>

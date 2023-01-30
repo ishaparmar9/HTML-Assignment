@@ -201,10 +201,29 @@
                         <input type="button" value="Secondary" id="sec-btn">
                         <br>
                         <label class="analysis-sub-label">Tabs</label>
+                        <div class="tab-container">
+                            <div class="tab-block tab1" style="color: #C8242F;">Tab1</div>
+                            <div class="tab-block">Tab2</div>
+                            <div class="tab-block">Tab3</div>
+                        </div>
+                        <div class="tab-content">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                        </div>
                     </form>
                 </div>
            </div>
         </div>
     </div>
+    <script>
+        const targetDiv = document.getElementById("sidebar");
+        const btn = document.getElementById("menu-bar-style");
+        btn.onclick = function () {
+        if (targetDiv.style.display !== "none") {
+            targetDiv.style.display = "none";
+        } else {
+            targetDiv.style.display = "block";
+        }
+        };
+    </script>
 </body>
 </html>
