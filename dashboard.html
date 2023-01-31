@@ -8,6 +8,18 @@
     <link rel="stylesheet" media="screen and (max-device-width:768px)" href="css/tabletview.css">
     <link rel="stylesheet" media="screen and (max-device-width:480px)" href="css/mobileview.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
     <title>Dashboard</title>
 </head>
 <body style="background-color: #FAFAFA;">
@@ -23,42 +35,41 @@
             <img class="header-content-style" id="dnwrd-arrow-style" src="/images/downward-arrow.svg" alt="">     
         </div>
         <div id="box-align">
-            <div id="sidebar">
-                <div class="sidebar-block" style="background-color: #FFF3F4; color: #C8242F;">
+            <div id="d-sidebar">
+                <div class="d-sidebar-block" style="background-color: #FFF3F4; color: #C8242F;">
                     <img src="images/dashboard-active.svg" alt="">
                     Dashboard
                 </div>
-                <div class="sidebar-block">
+                <div class="d-sidebar-block">
                     <img src="images/graph-default.svg" alt="">
                     Analysis
                 </div>
-                <div class="sidebar-block">
+                <div class="d-sidebar-block">
                     <img src="images/inbox-default.svg" alt="">
                     Inbox
                 </div>
-                <div class="sidebar-block">
+                <div class="d-sidebar-block">
                     <img src="images/clock-default.svg" alt="">
                     History
                 </div>
-                <div class="sidebar-block">
+                <div class="d-sidebar-block">
                     <img src="images/user-default.svg" alt="">
                     Users
                 </div>
-                <div class="sidebar-block">
+                <div class="d-sidebar-block">
                     <img src="images/maintenance-default.svg" alt="">
                     Maintenance
                 </div>
-                <div class="sidebar-block">
+                <div class="d-sidebar-block">
                     <img src="images/setting-default.svg" alt="">
                     Settings
                 </div>
             </div>
-            <div id="right-box">
-                <div id="box-head">
+            <div class="dashboard-main-box">
+                <div id="analysis-head">
                     Dashboard
                 </div>
-                <div class="container-fluid">
-                    <div class="row" style="width: 1247px;">
+                <div class="box-top">
                         <div class="col-box">
                             <div class="col-box-img">
                                 <img src="images/star.svg" alt="">
@@ -128,14 +139,12 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
                 </div>
-                <div class="container-fluid ">
-                    <div class="row stats-box">
+                    <div class="stats-box">
                         <div id="sales-graph-box">
                             <div class="graph-text">
                                 <span style="float: left;">Sales</span>
-                                <span style="text-align: right; font-size: 12px; display: inline-block; width: 690px; color: #ADADAD;">Weekly &nbsp; Monthly &nbsp; <span style="color: #C8242F;     border-bottom: 1px #C8242F solid; padding-bottom: 9px;">Yearly</span></span>
+                                <span style="text-align: right; font-size: 12px; display: inline-block; width: 80%; color: #ADADAD;">Weekly &nbsp; Monthly &nbsp; <span style="color: #C8242F;     border-bottom: 1px #C8242F solid; padding-bottom: 9px;">Yearly</span></span>
                             </div>
                             <div id="gragh-img">
                                 <img src="images/data-graph.png" alt="">
@@ -149,32 +158,33 @@
                                     <img src="images/pie-chart.svg" alt="">
                                 </div>
                             </div>
-                            <div class="container-fluid" id="gragh-values">
+                            <div id="graph-values">
                                 <div class="row">
-                                  <div class="col-8" style="display: flex;">
+                                  <div style="display: flex; width: fit-content;">
                                     <div class="circle" style="background-color: #C8242F;"></div>
-                                    United States of America
+                                      USA
                                   </div>
-                                  <div class="col-4" style="display: flex;">
-                                    <div class="circle" style="background-color: #A2B86C;"></div>
-                                    Canada
-                                  </div>
-                                </div>
-                                <div class="row" style="margin-top: 15px; ">
-                                  <div class="col-8" style="display: flex;">
+                                  <div style="display: flex; margin-top: 10px;">
                                     <div class="circle" style="background-color: #F16C20;"></div>
                                     Russia
                                   </div>
-                                  <div class="col-4" style="display: flex;">
-                                    <div class="circle" style="background-color: #EBC844;"></div>
+                                </div>
+                                <div class="row">
+                                  <div style="display: flex;">
+                                    <div class="circle" style="background-color: #A2B86C;"></div>
+                                    Canada
+                                  </div>
+                                  
+                                  <div style="display: flex; margin-top: 10px;">
+                                    <div class="circle" style="background-color: #EBC844"></div>
                                     India
                                   </div>
-                                </div>
+                                
+                            </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div id="invoice-box">
+                <div id="invoice-box" style="overflow-x: scroll;">
                     <div id="invoice-head">
                         Invoices
                     </div>
@@ -269,7 +279,7 @@
     </div>
 
     <script>
-        const targetDiv = document.getElementById("sidebar");
+        const targetDiv = document.getElementById("d-sidebar");
         const btn = document.getElementById("menu-bar-style");
         btn.onclick = function () {
         if (targetDiv.style.display !== "none") {

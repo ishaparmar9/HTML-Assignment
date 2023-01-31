@@ -5,6 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" media="screen and (max-device-width:768px)" href="css/tabletview.css">
+    <link rel="stylesheet" media="screen and (max-device-width:480px)" href="css/mobileview.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
     <title>Analysis</title>
 </head>
 <body style="background-color: #FAFAFA;">
@@ -56,18 +70,18 @@
                 </div>
                 <div id="analysis-form">
                     <form action="">
-                        <label class="analysis-label">One Column</label>
+                        <h4 class="analysis-label">One Column</h4>
+
+                        <input type="text" name="name1" id="name1" placeholder="Name" class="input-style1" >
                         <br>
 
-                        <input type="text" name="name1" id="name1" placeholder="Name" class="input-style1" style="width: 98.5%;">
-                        <br>
-
-                        <select name="dropdown" id="dropdown" class="input-style1" >
+                        <!-- <select name="dropdown" id="dropdown" class="input-style1" >
                             <option value="" selected disabled>Dropdown</option>
                             <option value="">first</option>
                             <option value="">second</option>
                         </select>
-                        <br>
+                        <br> -->
+                        <input type="text" placeholder="Dropdown" class="input-style1">
 
                         <textarea name="multi-line" id="multi-line" placeholder="Multiple line" class="input-style1 txt-area" ></textarea>
 
@@ -77,28 +91,30 @@
 
 
 
-                        <label class="analysis-label">Two Column</label>
-                        <br>
+                        <h4 class="analysis-label">Two Column</h4>
 
                         <div >
-                            <div class="col-style">
-                                <input type="text" name="name2" id="name2" placeholder="Name" style="margin-right: 30px; padding-left: 10px;">
-                                <fieldset style="margin-top: -10px;">
+                            <div class="col-style col2">
+                                <input type="text" name="name2" id="name2" placeholder="Name" style="padding-left: 10px; border: 1px #ADADAD solid;">
+                                <input type="text" name="name2" id="name2" placeholder="Name" style="padding-left: 10px; border: 1px #ADADAD solid;">
+
+                                <!-- <fieldset style="margin-top: -10px;">
                                     <legend>Username</legend>
                                     <input type="text" value="Johndoe">
-                                </fieldset>
+                                </fieldset> -->
                             </div>
 
 
                                 <br>
 
-                            <div class="col-style">
-                                <input type="password" name="pw" id="pw" value="111111111" style="margin-right: 30px; padding-left: 10px;">
-                                <select name="dropdown2" id="dropdown2" >
+                            <div class="col-style col2">
+                                <input type="password" name="pw" id="pw" value="111111111" style="padding-left: 10px; border: 1px #ADADAD solid;">
+                                <!-- <select name="dropdown2" id="dropdown2" >
                                     <option value="" selected disabled>Dropdown</option>
                                     <option value="">first</option>
                                     <option value="">second</option>
-                                </select>
+                                </select> -->
+                                <input type="text" name="" id="" placeholder="Dropdown" style="border: 1px #ADADAD solid; padding-left: 10px;">
                             </div>
 
                         </div>
@@ -107,21 +123,20 @@
                         <br>
 
 
-                        <label class="analysis-label">Three Column</label>
+                        <h4 class="analysis-label ">Three Column</h4>
 
-                        <br>
                         <div class="col-style col3">
-                            <fieldset>
+                            <fieldset style="border: 1px #C8242F solid;">
                                 <legend>Focus</legend>
-                                <input type="text">
-                            </fieldset>
-                            <fieldset style="margin-left: 32px; margin-right: 32px;">
-                                <legend>Password</legend>
-                                <input type="password">
+                                <input type="text" class="col3inpt">
                             </fieldset>
                             <fieldset>
+                                <legend>Password</legend>
+                                <input type="password" class="col3inpt">
+                            </fieldset>
+                            <fieldset style="border-style: dashed;">
                                 <legend>Disabled</legend>
-                                <input type="text" value="johndoe" disabled>
+                                <input type="text" value="johndoe" disabled style="background-color:#ffffff;" class="col3inpt">
                             </fieldset>
                         </div>
 
@@ -129,76 +144,81 @@
                         <br>
 
 
-                        <label class="analysis-label">Four Column</label>
-                        <br>
-
+                        <h4 class="analysis-label col4-head">Four Column</h4>
                         <div class="col-style" id="col4">
 
-                            <fieldset style="width: 100%;">
-                                <legend>Designation</legend>
+                            <fieldset style="width: 100%; border: 1px #C8242F solid;">
+                                <legend style="color: #C8242F;">Designation</legend>
                                 <input type="text" value="UI Designer">
                             </fieldset>
 
-                            <input type="text" placeholder="Name" style="margin-left: 31px;">
+                            <input type="text" placeholder="Name" style="border: 1px #ADADAD solid; padding-left: 10px;" class="col4-ipt" >
 
-                            <fieldset style="margin-left: 31px; margin-right: 31px;">
+                            <fieldset>
                                 <legend>Username</legend>
                                 <input type="text" value="johndue">
                             </fieldset>
 
-                            <select name="" id="">
+                            <input type="text" placeholder="Select" name="" id="" style="border: 1px #ADADAD solid; padding-left: 10px;" class="col4-ipt">
+
+                            <!-- <select name="" id="">
                                 <option value="" selected disabled>Select</option>
                                 <option value="">opt1</option>
                                 <option value="">opt2</option>
-                            </select>
+                            </select> -->
                         </div>
 
                         <br>
 
 
-                        <label class="analysis-label">Other Design Elements</label>
-                        <br>
+                        <h4 class="analysis-label">Other Design Elements</h4>
                         <label class="analysis-sub-label">File Upload</label>
                         <br>
                         <div class="upload-content"> 
                             <div class="upload-file-btn">
-                            <div style="display: flex; margin: 10px 25px"><div> <img src="images/cloud-upload-icon.svg" alt=""></div><div>&nbsp;Upload</div></div>
+                                <div class="upload-img" style="margin-right: 5px; margin-top: 8px;"> 
+                                    <img src="images/cloud-upload-icon.svg" alt="">
+                                </div>
+                                <div class="upload-txt" style="width: fit-content; margin-top: 8px;">
+                                    Upload
+                                </div>
                             </div>
-                            <div style="margin: 13px; color: #ADADAD;"> No Item Selected</div>
+                            <div style="margin: 10px; color: #ADADAD;"> No Item Selected</div>
                         </div>
                         <br>
                         <label class="analysis-sub-label">Radio Button</label>
                         <br>
                         <div class="radio-style">
                             <input type="radio" name="radio1" id="">Option1 &nbsp;&nbsp;&nbsp;
-                            <input type="radio" name="radio1" id="">Option2
+                            <input type="radio" name="radio1" id="" checked>Option2
                         </div>
                         <br>
                         <label class="analysis-sub-label">Checkbox</label>
                         <br>
                         <div class="radio-style">
-                            <input type="checkbox" name="cb" id="">Option1 &nbsp;&nbsp;&nbsp;
-                            <input type="checkbox" name="cb" id="">Option2
+                            <input type="checkbox" name="cb" id="" >Option1 &nbsp;&nbsp;&nbsp;
+                            <input type="checkbox" name="cb" id="" checked>Option2
                         </div>
                         <br>
                         <label class="analysis-sub-label">Snackbar</label>
                         <br>
-                        <div style="display: flex; margin-top: 15.85px; width: 100%;">
-                            <div style="display: flex; flex-direction: column;">
-                                <div class="err-msg"><img src="images/error-icon.svg" alt="" height="18px">&nbsp; This is an error Message</div>
-                                <div class="warning-msg"><img src="images/warning-icon.svg" alt="" height="18px">&nbsp; This is a warning message!</div>
+                         <div class="snackbar-box">
+                            <div>
+                                <div class="err-msg msg-box"><img src="images/error-icon.svg" alt="" height="18px">&nbsp; This is an error Message</div>
+                                <div class="warning-msg msg-box"><img src="images/warning-icon.svg" alt="" height="18px">&nbsp; This is a warning message!</div>
                             </div>
-                            <br>
-                            <div style="display: flex; flex-direction: column; margin-left: 25px;">
-                                <div class="info-msg"><img src="images/info-icon.svg" alt="" height="18px">&nbsp; This is an information message!</div>
-                                <div class="success-msg"><img src="images/success-icon.svg" alt="" height="18px">&nbsp; This is an Success message!</div>
+                            <div>
+                                <div class="info-msg msg-box"><img src="images/info-icon.svg" alt="" height="18px">&nbsp; This is an information message!</div>
+                                <div class="success-msg msg-box"><img src="images/success-icon.svg" alt="" height="18px">&nbsp; This is an Success message!</div>
                             </div>
                         </div>
                         <br>
                         <label class="analysis-sub-label">Call to action</label>
                         <br>
-                        <input type="button" value="Primary" id="pr-btn">
-                        <input type="button" value="Secondary" id="sec-btn">
+                        <dvi id="btns">
+                            <input type="button" value="Primary" id="pr-btn">
+                            <input type="button" value="Secondary" id="sec-btn">
+                        </dvi>
                         <br>
                         <label class="analysis-sub-label">Tabs</label>
                         <div class="tab-container">
