@@ -282,6 +282,17 @@
         /* display: inline-block;
         text-align: center; */
     }
+
+#graph-values
+{
+    justify-content: space-between;
+    margin-left: -75px;
+}
+#graph-values .row div
+{
+    font-size: 11px;
+}
+
      
  
 .col-box

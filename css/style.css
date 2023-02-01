@@ -302,15 +302,14 @@
 #graph-values
 {
     display: flex;
-    justify-content: space-between;
-    padding-left: 30px;
+    justify-content: space-around;
+    /* padding-left: 30px; */
+    margin-left: -30px;
 }
 
 .row{
     display: flex;
     flex-direction: column;
-    width: 90%;
-    grid-template-rows: auto auto;
 }
 
 .col-box

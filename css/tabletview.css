@@ -264,6 +264,11 @@
     {
         padding-left: 80px;
     }
+#graph-values .row div
+{
+    font-size: 15px;
+}
+
     #pie-chart-box
     {
         margin-top: 20px;
